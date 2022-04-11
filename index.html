@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>字母找相同</title>
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<defs>
+			<filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+				<feMorphology operator="dilate" radius="20" in="SourceAlpha" result="thicken" />
+				<feGaussianBlur in="thicken" stdDeviation="40" result="blurred" />
+				<feFlood flood-color="rgb(255,255,255)" result="glowColor" />
+				<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+				<feMerge>
+					<feMergeNode in="softGlow_colored" />
+					<feMergeNode in="SourceGraphic" />
+				</feMerge>
+			</filter>
+		</defs>
+	</svg>
+</head>
+<body>
+	<div id="frame">
+		<div class="background">
+			<div class="background-image-1 common-1"></div>
+			<div class="background-image-2 common-1"></div>
+			<div class="background-image-3 common-1"></div>
+			<div class="spinning-star-1 common-2"></div>
+			<div class="spinning-star-2 common-2"></div>
+			<div class="spinning-star-3 common-2"></div>
+			<div class="spinning-star-4 common-2"></div>
+		</div>
+		<div class="cutie">
+			<div class="cutie-message-bar common"></div>
+			<div class="cutie-message-text">请从右侧图形中找出和左侧相同的图形。</div>
+			<div class="cutie-face common"></div>
+			<div class="cutie-eyes common"></div>
+		</div>
+		<div class="question">
+			<div class="left">
+				<div class="background common"></div>
+				<div class="image common"></div>
+			</div>
+			<div class="right">
+				<div class="background-1 common"></div>
+				<div class="image-1 common"></div>
+				<div class="right-1 common"></div>
+				<div class="wrong-1 common"></div>
+				<div class="background-2 common"></div>
+				<div class="image-2 common"></div>
+				<div class="right-2 common"></div>
+				<div class="wrong-2 common"></div>
+				<div class="background-3 common"></div>
+				<div class="image-3 common"></div>
+				<div class="right-3 common"></div>
+				<div class="wrong-3 common"></div>
+			</div>
+		</div>
+		<div class="start-screen">
+			<div class="start-screen-button"></div>
+		</div>
+		<div class="end-screen">
+			<div class="end-screen-score">
+				<div class="end-screen-score-text">0</div>
+				<div class="end-screen-score-point-text">pt.</div>
+				<div class="end-screen-score-image"></div>
+			</div>
+			<div class="end-screen-result"></div>
+			<div class="end-screen-buttons">
+				<div class="end-screen-button-1 common">再玩一次</div>
+				<!--
+				<div class="end-screen-button-2 common">返回选单 </div>
+				<div class="end-screen-button-3 common">回主选单 </div>
+				-->
+			</div>
+		</div>
+		<div class="timer">
+			01:00
+			<div class="timer_text"></div>
+		</div>
+		<div class="exit-button">
+			<div class="exit-button-door-1 common-1"></div>
+			<div class="exit-button-door-2 common-1"></div>
+			<div class="exit-button-text-1 common-2"></div>
+			<div class="exit-button-text-2 common-2"></div>
+		</div>
+		<div class="fullscreen"></div>
+		<div class="autoplay"></div>
+		<div class="star-cursor"></div>
+	</div>
+	<script src="regenerator-runtime/runtime.js"></script>
+	<script src="hand.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
