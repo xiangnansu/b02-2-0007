@@ -494,6 +494,7 @@ html, body {
 	background-image: url(shapes/fullscreen.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
+	display: none;
 }
 
 .autoplay {
@@ -505,6 +506,7 @@ html, body {
 	background-image: url(shapes/autoplay-play.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
+	display: none;
 }
 
 .star-cursor {
